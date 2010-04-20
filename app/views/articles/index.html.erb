@@ -2,13 +2,13 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Status</th>
-    <th>Date posted</th>
-    <th>Author</th>
+    <th>Title &nbsp;</th>
+    <th>Body &nbsp;</th>
+    <th>Status &nbsp;</th>
+    <th>Date posted &nbsp;</th>
+    <th>Author &nbsp;</th>
   </tr>
-
+<% if Article != nil then %>
 <% @articles.each do |article| %>
   <tr>
     <td><%=h article.title %></td>
@@ -20,6 +20,7 @@
      <td class ="side"><%= link_to 'Edit', edit_article_path(article) %></td>
      <td class ="side"><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+<% end %>
 <% end %>
 </table>
 
