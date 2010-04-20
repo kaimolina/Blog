@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 
   def print
     @article = Article.find(params[:id])
-    render :action => :print
+    render :action => "print", :layout => "print"
   end
 
   # GET /articles/new

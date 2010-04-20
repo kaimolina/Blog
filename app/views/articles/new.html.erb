@@ -16,10 +16,6 @@
     <%= select :article, :status, Article.statuses %>
   </p>
   <p>
-    <%= f.label :date_posted %><br />
-    <%= f.datetime_select :date_posted %>
-  </p>
-  <p>
     <%= f.label :author_id %><br />
     <%= collection_select(:article, :author_id, Author.all, :id, :full_name, :include_blank =>true) %>
   </p>

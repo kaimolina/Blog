@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :articles, :collection => {:latest => :get} do | articles |articles.resources :comments
+  map.resources :articles, :collection => {:latest => :get} , :member => {:print => :get} do | articles |articles.resources :comments
   end
 	map.resources :authors
 

@@ -5,20 +5,18 @@
     <th>Title &nbsp;</th>
     <th>Body &nbsp;</th>
     <th>Status &nbsp;</th>
-    <th>Date posted &nbsp;</th>
     <th>Author &nbsp;</th>
   </tr>
 <% if Article != nil then %>
 <% @articles.each do |article| %>
   <tr>
-    <td><%=h article.title %></td>
-    <td><%=h article.body %></td>
-    <td><%=h article.status %></td>
-    <td><%=h article.date_posted %></td>
-    <td><%=h article.author_id %></td>
-     <td class ="side"><%= link_to 'Show', article %></td>
-     <td class ="side"><%= link_to 'Edit', edit_article_path(article) %></td>
-     <td class ="side"><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h article.title %>&nbsp;</td>
+    <td><%=h truncate(article.body) %>&nbsp;</td>
+    <td><%=h article.status %>&nbsp;</td>
+    <td><%=h article.author.full_name%>&nbsp;</td>
+    <td><%= link_to 'Show', article %>&nbsp;</td>
+    <td><%= link_to 'Edit', edit_article_path(article) %>&nbsp;</td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>&nbsp;</td>
   </tr>
 <% end %>
 <% end %>

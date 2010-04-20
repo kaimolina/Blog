@@ -2,6 +2,8 @@
   <h2 class='blog-title'><%= @article.title %></h2>
   <div class='blog-author'>Posted by: <%= @article.author.full_name %></div>
   <div class='blog-body'><%= @article.body %></div>
+  <br />
+  <%= link_to 'Print this article.', print_article_path(@article) %>
   <div class='blog-comments'>
     <% @article.comments.each do |comment| %>
       <%= list_comments(comment) %>
