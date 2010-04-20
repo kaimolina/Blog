@@ -1,0 +1,11 @@
+<div>
+  <h2 class='blog-title'><%= @article.title %></h2>
+  <div class='blog-author'>Posted by: <%= @article.author.full_name %></div>
+  <div class='blog-body'><%= @article.body %></div>
+  <div class='blog-comments'>
+    <% @article.comments.each do |comment| %>
+      <%= list_comments(comment) %>
+    <% end  %>
+    <%= render :partial =>'comments/form', :locals => {:comment => @comment, :article => @article } %>
+  </div>
+ </div>

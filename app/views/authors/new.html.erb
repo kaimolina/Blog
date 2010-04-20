@@ -1,0 +1,9 @@
+<h3>Create New Author</h3>
+<% form_for(@author) do |f| %>
+<%= render :partial => "form", :locals => {:f => f} %>
+<p>
+  <%= f.submit 'Submit' %>
+</p>
+<%= f.error_messages %>
+
+<% end %>

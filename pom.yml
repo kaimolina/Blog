@@ -1,0 +1,15 @@
+--- 
+dependencies: []
+
+plugins: []
+
+source_info: 
+  scm_tag: ""
+  scm_url: ""
+release_info: 
+  repository: ecc-releases
+  server: http://pip.manila.exist.com
+  group_id: kaisel_molina
+  type: tar.gz
+  version: 0.0.4
+  artifact_id: blogkai

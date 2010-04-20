@@ -1,0 +1,32 @@
+<center><h1>List of all Authors</h1></center>
+<table>
+ <tr>
+    <th>Lastname</th>
+    <th>Firstname</th>
+    <th>Birthday</th>
+    <th>Remarks</th>
+    <th></th>
+  </tr>
+<% @authors.each do |author| %>
+  <tr>
+    <td><%= author.last_name %></td>
+    <td><%= author.first_name %></td>
+    <td><%= author.birthday %></td>
+    <td><%= author.remarks %></td>
+    <td><%= say_hello(author) %></td>
+    <td><%= link_to "Edit", edit_author_path(author) %></td>
+    <td><%= link_to 'Show', author %></td>
+    <td><%= link_to 'Delete', author,  :confirm => 'Are you sure?', :method => :delete %></td>
+
+  </tr>
+
+<% end%>
+</table>
+<%= link_to "Create new Author", new_author_path %>
+<br />
+<br />
+<br />
+<% @authors.each do |author| %>
+<%= author_pane(author) %>
+<br />
+<% end%>
