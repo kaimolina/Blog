@@ -6,7 +6,13 @@
 <%= stylesheet_link_tag "blog" %>
 <%= stylesheet_link_tag "style" %>
 <script type='text/javascript' src='http://vectorart.org/wp-content/themes/vector/images/jquery.js'></script> 
-
+<script type="text/javascript" src="/javascripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+  tinyMCE.init({
+    mode: "textareas",
+    theme: "simple"
+  });
+</script>
 </head>
 
 <body>
@@ -33,8 +39,7 @@
                             <li><%= link_to "home", "/"%></li>
                             <li><%= link_to "articles", articles_path %></li>
                             <li><%= link_to "authors", authors_path %></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">contact us</a></li>
+                            <li><%= link_to "logout", logout_path %></li>
                         </ul>
                     
                 	</div><!-- menu -->
