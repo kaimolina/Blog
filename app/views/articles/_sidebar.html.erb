@@ -1,9 +1,11 @@
 <h2 class='blog-title'>Previous Articles</h2>
+<% if Article.sidebar != nil then%>
 <% Article.sidebar.each do |article| unless article == Article.latest %>
       <div class='side'><%= article.title  %></div>
       by: 
       <%= article.author.full_name %>
       <br />
       <br />
+<% end %>
 <% end %>
 <% end %>
