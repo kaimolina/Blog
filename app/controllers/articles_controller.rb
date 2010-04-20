@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :require_author, :except => [:latest, :show]
+
   def latest
       @article =  Article.latest
       @comment = @article.comments.build
