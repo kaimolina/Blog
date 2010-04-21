@@ -9,32 +9,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100420064718) do
+ActiveRecord::Schema.define(:version => 20100421005109) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.text     "status"
     t.integer  "author_id"
+    t.datetime "date_posted"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "date_posted"
   end
 
   create_table "authors", :force => true do |t|
     t.string   "last_name"
+    t.string   "first_name"
     t.text     "remarks"
     t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
     t.string   "login",               :null => false
     t.string   "email",               :null => false
     t.string   "crypted_password",    :null => false
     t.string   "password_salt",       :null => false
     t.string   "persistence_token",   :null => false
-    t.string   "perishable_token",    :null => false
     t.string   "single_access_token", :null => false
+    t.string   "perishable_token",    :null => false
   end
 
   create_table "comments", :force => true do |t|

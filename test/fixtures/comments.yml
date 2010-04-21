@@ -3,11 +3,11 @@
 one:
   email: MyString
   body: MyText
-  comment_date: 2010-04-16 15:03:30
+  comment_date: 2010-04-21 08:28:24
   article_id: 1
 
 two:
   email: MyString
   body: MyText
-  comment_date: 2010-04-16 15:03:30
+  comment_date: 2010-04-21 08:28:24
   article_id: 1

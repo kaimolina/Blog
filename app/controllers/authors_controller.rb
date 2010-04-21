@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
 
-  before_filter :require_author
+  #before_filter :require_author
   def index
     @authors = Author.all
   end

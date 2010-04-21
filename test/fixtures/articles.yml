@@ -4,12 +4,12 @@ one:
   title: MyString
   body: MyText
   status: MyText
-  date_posted: 2010-04-19 13:03:35
   author_id: 1
+  date_posted: 2010-04-21 08:24:29
 
 two:
   title: MyString
   body: MyText
   status: MyText
-  date_posted: 2010-04-19 13:03:35
   author_id: 1
+  date_posted: 2010-04-21 08:24:29

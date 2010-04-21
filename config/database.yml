@@ -44,5 +44,5 @@ production:
   database: blogkai_production
   pool: 5
   username: root
-  password: latitude
+  password: latitude 
   socket: /var/run/mysqld/mysqld.sock

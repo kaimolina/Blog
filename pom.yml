@@ -11,5 +11,5 @@ release_info:
   server: http://pip.manila.exist.com
   group_id: kaisel_molina
   type: tar.gz
-  version: 0.0.4
+  version: 0.0.5
   artifact_id: blogkai
