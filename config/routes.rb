@@ -1,10 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :sessions, :collection => {:logout => :get}
-
   map.resources :articles, :collection => {:latest => :get} , :member => {:print => :get} do | articles |articles.resources :comments
   end
 	map.resources :authors
-
   map.login "/login", :controller => "sessions", :action => "new"
   map.logout "/logout", :controller => "sessions", :action => "logout"
 

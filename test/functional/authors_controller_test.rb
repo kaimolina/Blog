@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AuthorsControllerTest < ActionController::TestCase
-  test "should get index" do
+=begin  test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:authors)
@@ -41,5 +41,5 @@ class AuthorsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to authors_path
-  end
+=end
 end

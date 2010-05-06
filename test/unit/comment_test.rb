@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
 
-  setup do
+  def setup
 	@comment = Comment.create(:body => "ecc", :email =>"kaimolina2@gmail.com")
 	@comment_without_email = Comment.new(:body =>"exist code camper")
 	@comment_without_body = Comment.new(:email =>"kaimolina@gmail.com")
@@ -21,10 +21,11 @@ class CommentTest < ActiveSupport::TestCase
 	end	
   
   test "Should validate the presence of email" do
-		assert_equal false, @author_without_email.save
+		assert_equal false, @comment_without_email.save
 	end
   # Replace this with your real tests.
   test "the truth" do
     assert true
   end
+  
 end

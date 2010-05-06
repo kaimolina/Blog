@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_author_session, :current_author, :logged_in?
 
   # Scrub sensitive parameters from your log
-   filter_parameter_logging :password
+  filter_parameter_logging :password
 
   def logged_in?
     not current_author.nil?

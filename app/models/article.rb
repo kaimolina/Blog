@@ -2,13 +2,10 @@ class Article < ActiveRecord::Base
   belongs_to :author
   has_many :comments
 	validates_presence_of [:title, :body], :message => "Title and Body required."
-
   def self.statuses
     ["Draft","Posted"]
   end
-
   validates_inclusion_of :status, :in => Article.statuses
-
   def self.latest
     Article.find_by_status("Posted", :order => "date_posted DESC")
   end

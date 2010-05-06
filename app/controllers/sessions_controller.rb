@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   def new
     @author_session = AuthorSession.new
   end
-
   def create
     @author_session = AuthorSession.new(params[:author_session])
     if @author_session.save
@@ -14,15 +13,12 @@ class SessionsController < ApplicationController
       render :action => new
     end
   end
-
   def logout
     destroy
   end
-
   def destroy
     current_author_session.destroy
     flash[:notice] = "Logout Successful!"
     redirect_back_or_default '/'
   end
-
 end
