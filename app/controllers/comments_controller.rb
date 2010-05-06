@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
     @comment = @article.comments.build
     render :template => "articles/latest"
   end
-
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.build(params[:comment])
@@ -15,9 +14,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Fail to post comment."
       render :template => "articles/latest"
     end
-
   end
-  
   def destroy
     @comment = Comment.find(params[:id])
     @comment.delete_by_author(params[:author_id])

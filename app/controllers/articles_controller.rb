@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def latest
     @article = Article.latest
     unless @article.nil?
-      @comment = @article.comments.build
+      @comment = Comment.new(:article_id => @article.id)
     end
   end
   # GET /articles

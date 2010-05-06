@@ -1,5 +1,5 @@
 <p>
-  <%= f.label :login %>
+  <%= f.label :username %>
   <br/>
   <%= f.text_field :login %>
 </p>
@@ -31,7 +31,7 @@
 <p>
   <%= f.label :birthday %>
   <br />
-  <%= f.date_select :birthday %>
+  <%= f.date_select :birthday, :start_year => 1950 %>
 </p>
 <p>
   <%= f.label :remarks %>

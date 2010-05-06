@@ -1,12 +1,11 @@
 <h2 class='blog-title'>Previous Articles</h2>
-
-<% if Article != nil then  %>
-<% Article.sidebar.each do |article| unless article == Article.latest %>
-      <div class='side'><%= article.title  %></div>
+  <% if Article != nil then  %>
+    <% Article.sidebar.each do |article| unless article == Article.latest %>
+      <div class='side'><%=link_to truncate(article.title, :length => 30), article_path(article)%></div>
       by: 
       <%= article.author.full_name %>
       <br />
       <br />
-<% end %>
-<% end %>
+    <% end %>
+  <% end %>
 <% end %>

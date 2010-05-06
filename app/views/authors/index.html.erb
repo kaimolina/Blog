@@ -1,4 +1,4 @@
-<center><h1>List of all Authors</h1></center>
+<h1 style="text-align: center">List of all Authors</h1>
 <table>
  <tr>
     <th>Lastname</th>
@@ -13,7 +13,6 @@
     <td><%= author.first_name %></td>
     <td><%= author.birthday %></td>
     <td><%= author.remarks %></td>
-    <td><%= say_hello(author) %></td>
     <td><%= link_to "Edit", edit_author_path(author) %></td>
     <td><%= link_to 'Show', author %></td>
     <td><%= link_to 'Delete', author,  :confirm => 'Are you sure?', :method => :delete %></td>
@@ -22,9 +21,6 @@
 
 <% end%>
 </table>
-<br />
-<br />
-<%= link_to "Create new Author", new_author_path %>
 <br />
 <br />
 <br />

@@ -1,8 +1,4 @@
 module AuthorsHelper
-  def say_hello(author)
-    "<div>Hello #{author.first_name}</div>"
-  end
-
   def author_pane(author)
   " <div>
       <table>
