@@ -1,0 +1,19 @@
+<p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :body %><br />
+  <%= f.text_area :body %>
+</p>
+<p>
+  <%= f.label :status %><br />
+  <%= select :article, :status, Article.statuses %>
+</p>
+<p>
+  <%= f.label :author_id %><br />
+  <%= collection_select(:article, :author_id, Author.all, :id, :full_name, :include_blank =>true) %>
+</p>
+<p>
+<%= f.hidden_field :date_posted, :value=> "#{DateTime.now}" %>
+</p>
