@@ -18,10 +18,10 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: kaisel
+  database: blogkai_development
   pool: 5
-  username: kaisel
-  password: kaisel
+  username: root
+  password: latitude
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: kaisel
+  database: blogkai_production
   pool: 5
-  username: kaisel
-  password: kaisel 
+  username: root
+  password: latitude
   socket: /var/run/mysqld/mysqld.sock

@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
   belongs_to :author
   has_many :comments
+  has_many :likers
+  has_many :likes, :source => :author, :through => :likers
 	validates_presence_of [:title, :body, :author], :message => "is required."
   def self.statuses
     ["Draft","Posted"]

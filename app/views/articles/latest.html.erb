@@ -1,10 +1,12 @@
 <div>
-  <%= show_latest(@article) %>
+  <%= show_latest(@article) %><br /> 
+    <%= render :partial => 'likers/form', :locals => {:article => @article, :like_status => nil} %><br />
+    <div style='text-align: center'; class='blog-title'>
+    <%= link_to 'Hide Comments', "javascript:displayAll('hide')", :id => "link" %>
+    </div>
   <div class='blog-comments'>
     <% unless @article.nil? %>
-    <% @article.comments.each do |x| %>
-      <%= list_comments(x) %>
-    <% end  %>
+		<%= render :partial =>'comments/comments', :locals => {:article => @article } %>
     <%= render :partial =>'comments/form', :locals => {:comment => @comment, :article => @article } %>
     <% end %>
   </div>

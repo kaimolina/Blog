@@ -1,14 +1,19 @@
 <br />
-<h2>Post Comment</h2>
-<% form_for(:comment, :url => article_comments_path(article) ) do |f| %>
-	<%= f.error_messages%>
-	<p>
-		<%= f.label :email %>: 	
-		<%= f.text_field :email %>
-	</p>
-	<p>
-		<%= f.label :body %><br /> 	
-		<%= f.text_area :body %>
-	</p>
-	<%= f.submit "Post Comment" %>
+<h2 class='blog-title'>Post Comment</h2>
+<% remote_form_for(:comment, 
+									 :url			 => article_comments_path(article),
+									 :update 	 => "blog-comments") do |f| %>
+  <p>
+    <%= f.error_messages %>
+  </p>
+  <p>
+    <%= f.label :email %>:
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <%= f.hidden_field :comment_date, :value => DateTime.now %>
+  <%= f.submit "Post Comment", :onmousedown => 'saveMCE(); return false;' %>
 <% end %>

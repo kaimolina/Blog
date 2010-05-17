@@ -1,16 +1,18 @@
 module CommentsHelper
   def list_comments(z)
-    "<div>
-       <table>
+    "<table>
          <tr>
            <td>From:</td>
            <td>#{ z.email}</td>
          </tr>
          <br />
+         
          <tr>
-           <td colspan='2'>#{ z.body}</td>
+           <td colspan='2'><div id='comment-#{z.id}'>#{ z.body} </div></td>
+     
          </tr>
+        
        </table>
-     </div>"
+       #{link_to 'Hide', "javascript:display('hide', #{z.id})", :id => "link-#{z.id}"}"
   end
 end

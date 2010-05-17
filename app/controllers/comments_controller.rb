@@ -8,11 +8,11 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.build(params[:comment])
     if @comment.save
-      flash[:notice] = "Comment was successfully posted."
-      redirect_to article_path(@article)
+      flash[:notice] = "Comment was successfuly posted."
+      render :partial => 'comments', :locals => {:comment => @comment} unless @comment.new_record?
     else
-      flash[:notice] = "Fail to post comment."
-      render :template => "articles/latest"
+      flash[:notice] = "Failed to post comment."
+      render :partial => 'error', :locals => {:comment => @comment, :article => @article}, :status => 444
     end
   end
   def destroy
